@@ -208,3 +208,6 @@ __marimo__/
 
 # Data
 data/
+
+# ollama folder for local LLMs
+.ollama/

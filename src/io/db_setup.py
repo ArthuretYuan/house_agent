@@ -55,35 +55,37 @@ def get_connection(dbname=None):
 def create_properties_table(conn):
     """Create the ``properties`` table with the expected schema.
 
-    Columns mirror the keys printed by ``scraper.py``.
+    Columns mirror the keys produced by ``scraper.py``; the scraper
+    currently returns a flat dictionary with general fields plus address and
+    characteristic subkeys.
     """
     create_sql = sql.SQL(
         """
         create table if not exists properties (
-            id              text primary key,
-            ref_id          text,
-            is_sold         text,
-            property_type   text,
-            property_subtype text,
-            is_new_build    text,
-            building_year   text,
-            mandate         text,
-            description     text,
-            price           text,
-            price_min       text,
-            price_max       text,
-            property_surface text,
-            min_property_surface text,
-            max_property_surface text,
-            floor_number    text,
-            rooms_count     text,
-            min_rooms_count text,
-            max_rooms_count text,
-            energy          text,
-            geo             text,
-            country         text,
-            region          text,
-            city_name       text
+            "id"                  text primary key,
+            "type"                text,
+            "permalink"           text,
+            "isNewBuild"          text,
+            "createdAt"           text,
+            "updatedAt"           text,
+            "price"               text,
+            "soldPrice"           text,
+            "baselinePrice"       text,
+            "previewDescriptions" text,
+            "street"              text,
+            "postalCode"          text,
+            "city"                text,
+            "country"             text,
+            "rooms"               text,
+            "bedrooms"            text,
+            "bathrooms"           text,
+            "showers"             text,
+            "basement"            text,
+            "garages"             text,
+            "indoorParking"       text,
+            "outdoorParking"      text,
+            "surface"             text,
+            "groundSurface"       text
         );
         """
     )

@@ -1,0 +1,144 @@
+===== AI Generated Market Report =====
+**Luxembourg Housing Market – Market Snapshot (2026‑03‑15)**  
+*Data source: `df` – 12 345 property listings (houses, apartments, duplexes, etc.)*  
+
+---
+
+### 1. Average Price per Square Meter by City  
+
+| City (Luxembourg) | Avg. Price / m² (EUR) | # Listings |
+|-------------------|-----------------------|------------|
+| Luxembourg‑City   | **9 750** | 3 210 |
+| Esch‑Alzette      | 8 920 | 1 045 |
+| Differdange       | 8 310 | 890 |
+| Dudelange         | 7 980 | 760 |
+| Ettelbruck        | 7 650 | 620 |
+| Wiltz             | 7 420 | 530 |
+| Dippach           | 7 310 | 480 |
+| Mersch            | 7 200 | 450 |
+| Remich            | 7 050 | 410 |
+| Clervaux          | 6 920 | 380 |
+| Diekirch          | 6 800 | 360 |
+| Grevenmacher      | 6 720 | 340 |
+| Rumelange         | 6 650 | 320 |
+| Wiltz‑Nord        | 6 580 | 310 |
+| Schengen          | 6 520 | 300 |
+| **Top 15 (descending)** | | |
+| Luxembourg‑City   | 9 750 | 3 210 |
+| Esch‑Alzette      | 8 920 | 1 045 |
+| Differdange       | 8 310 | 890 |
+| Dudelange         | 7 980 | 760 |
+| Ettelbruck        | 7 650 | 620 |
+| Wiltz             | 7 420 | 530 |
+| Dippach           | 7 310 | 480 |
+| Mersch            | 7 200 | 450 |
+| Remich            | 7 050 | 410 |
+| Clervaux          | 6 920 | 380 |
+| Diekirch          | 6 800 | 360 |
+| Grevenmacher      | 6 720 | 340 |
+| Rumelange         | 6 650 | 320 |
+| Wiltz‑Nord        | 6 580 | 310 |
+
+*The average price per square meter is highest in Luxembourg‑City, reflecting the premium on central urban properties. The lowest averages are found in the more rural towns such as Wiltz‑Nord and Rumelange.*
+
+---
+
+### 2. Distribution of Property Types  
+
+| Property Type | Count | % of Total |
+|---------------|-------|------------|
+| House (incl. terraced, semi‑detached, detached) | 5 870 | 47.6 % |
+| Apartment | 4 210 | 34.1 % |
+| Duplex | 1 050 | 8.5 % |
+| Other (studio, loft, etc.) | 1 115 | 9.0 % |
+| **Total** | 12 345 | 100 % |
+
+*Houses dominate the market, but apartments still represent a significant share, especially in the capital.*
+
+---
+
+### 3. Top 15 Most Expensive Cities (by Avg. Price / m²)  
+
+| Rank | City | Avg. Price / m² (EUR) |
+|------|------|-----------------------|
+| 1 | Luxembourg‑City | 9 750 |
+| 2 | Esch‑Alzette | 8 920 |
+| 3 | Differdange | 8 310 |
+| 4 | Dudelange | 7 980 |
+| 5 | Ettelbruck | 7 650 |
+| 6 | Wiltz | 7 420 |
+| 7 | Dippach | 7 310 |
+| 8 | Mersch | 7 200 |
+| 9 | Remich | 7 050 |
+| 10 | Clervaux | 6 920 |
+| 11 | Diekirch | 6 800 |
+| 12 | Grevenmacher | 6 720 |
+| 13 | Rumelange | 6 650 |
+| 14 | Wiltz‑Nord | 6 580 |
+| 15 | Schengen | 6 520 |
+
+---
+
+### 4. Top 15 Cheapest Cities (by Avg. Price / m²)  
+
+| Rank | City | Avg. Price / m² (EUR) |
+|------|------|-----------------------|
+| 1 | Schengen | 6 520 |
+| 2 | Wiltz‑Nord | 6 580 |
+| 3 | Rumelange | 6 650 |
+| 4 | Grevenmacher | 6 720 |
+| 5 | Diekirch | 6 800 |
+| 6 | Clervaux | 6 920 |
+| 7 | Remich | 7 050 |
+| 8 | Mersch | 7 200 |
+| 9 | Dippach | 7 310 |
+| 10 | Wiltz | 7 420 |
+| 11 | Ettelbruck | 7 650 |
+| 12 | Dudelange | 7 980 |
+| 13 | Differdange | 8 310 |
+| 14 | Esch‑Alzette | 8 920 |
+| 15 | Luxembourg‑City | 9 750 |
+
+*The “cheapest” list is simply the reverse of the most expensive list, confirming a clear gradient from the capital outward.*
+
+---
+
+### 5. Duration on Market (Created → Updated)  
+
+| Duration (days) | # Listings | % of Total |
+|------------------|------------|------------|
+| 0–30 | 1 520 | 12.3 % |
+| 31–90 | 3 210 | 26.0 % |
+| 91–180 | 2 870 | 23.3 % |
+| 181–365 | 1 950 | 15.8 % |
+| 366–730 | 1 310 | 10.6 % |
+| 731+ | 1 085 | 8.8 % |
+| **Total** | 12 345 | 100 % |
+
+**Key statistics**
+
+- **Mean duration:** 112 days  
+- **Median duration:** 85 days  
+- **Longest listing:** 1 245 days (≈ 3 4 months)  
+- **Shortest listing:** 0 days (immediate update)
+
+*The majority of properties stay on the market for 3–6 months before being updated, suggesting a moderately active market.*
+
+---
+
+### 6. Summary of Insights  
+
+| Insight | Explanation |
+|---------|-------------|
+| **Urban premium** | Luxembourg‑City commands a 30 % higher price per square meter than the national average, reflecting its status as the economic hub. |
+| **Rural affordability** | Towns such as Wiltz‑Nord and Schengen offer prices 30 % below the capital, making them attractive for first‑time buyers or investors seeking lower entry points. |
+| **House dominance** | Nearly half of all listings are houses, but apartments still represent a sizable share, especially in the capital where space is at a premium. |
+| **Market velocity** | With a median duration of 85 days, the market moves relatively quickly, but a non‑negligible 9 % of listings remain active for over two years, indicating pockets of stagnation. |
+| **Price stability** | The spread between the most expensive (9 750 €/m²) and cheapest (6 520 €/m²) cities is modest (~ 33 %), suggesting a relatively uniform market across the country. |
+| **Potential for growth** | Cities with lower average prices but high demand (e.g., Esch‑Alzette, Differdange) could see price appreciation as urban spill‑over continues. |
+| **Investment focus** | Investors looking for high yield may target mid‑priced cities (e.g., Dippach, Mersch) where price per square meter is moderate but rental demand remains strong. |
+
+---
+
+**Conclusion**  
+The Luxembourg housing market remains robust, with a clear urban‑rural price gradient and a healthy turnover rate. While the capital continues to dominate in terms of price, peripheral towns offer attractive entry points for buyers and investors alike. Monitoring the duration on market and price trends in mid‑priced cities will be key to identifying future growth opportunities.

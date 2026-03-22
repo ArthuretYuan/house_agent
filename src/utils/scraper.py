@@ -45,50 +45,70 @@ def property_scraper(url, is_save_json=False):
     data = json.loads(json_text)
     #json.dump(data, open("data.json", "w"), indent=4)
 
-    print("Top level keys:")
-    print(data.keys())
-    print(data["search"].keys())
-    print(data["config"].keys())
-    #print(data["search"])
-    print(data["search"]['list'][0].keys())
-    print(data["search"]['listings'][0].keys())
-    print("=" * 40)
+    # print("\nTop level keys:")
+    # print(data.keys())
 
+    # print("\nKeys in 'search':")
+    # print(data["search"].keys())
 
-    property_list = data["search"]["list"]
+    # print("\nKeys in 'config':")
+    # print(data["config"].keys())
+    # #print(data["search"])
+
+    # print("\nSample property keys:")
+    # print(data["search"]['list'][0].keys())
+
+    # print("\nKeys in 'listings':")
+    # print(data["search"]['listings'][0].keys())
+
+    # print("\nExtracting property characteristic...")
+    # print(data["search"]['listings'][0]['characteristic'].keys())
+
+    # print("\nExtracting property address...")
+    # print(data["search"]['listings'][0]['address'].keys())
+
+    # print("=" * 40)
+    
+    property_list = data["search"]["listings"]
 
     properties_output = []
     # list of fields explicitly printed below; output will include only these
-    printed_keys = [
+    general_keys = [
         "id",
-        "isSoldProperty",
-        "propertyType",
-        "propertySubType",
+        "type",
+        "permalink",
         "isNewBuild",
-        "buildingYear",
-        "mandate",
-        "description",
+        "createdAt",
+        "updatedAt",
         "price",
-        "price_min",
-        "price_max",
-        "propertySurface",
-        "minPropertySurface",
-        "maxPropertySurface",
-        "floorNumber",
-        "roomsCount",
-        "minRoomsCount",
-        "maxRoomsCount",
-        "energy",
-        "geo",
+        "soldPrice",
+        "baselinePrice",
+        "previewDescriptions",
+        "address",
+        "characteristic"
     ]
+    address_keys = ["street", "postalCode", "city", "country"] #TODO
+    characteristic_keys = ['rooms', 'bedrooms', 'bathrooms', 'showers', 'basement', 'garages', 'indoorParking', 'outdoorParking', 'surface', 'groundSurface'] #TODO
+    
+    #dict_keys(['id', 'externalReference', 'type', 'typeKey', 'typeId', 'group', 'groupId', 'format', 'permalink', 'isNewBuild', 'createdAt', 'updatedAt', 'soldPrice', 'baselinePrice', 'status', 'transaction', 'publishTo', 'address', 'contact', 'media', 'errors', 'previewDescription', 'previewDescriptions', 'price', 'isPriceOnDemand', 'characteristic'])
 
     for property in property_list:
-        print("Property details:")
-        print(f"ID: {property['id']}\nSold: {property['isSoldProperty']}\nPropertyType: {property['propertyType']}\nPropertySubType: {property['propertySubType']}\nIsNewBuild: {property['isNewBuild']}\nBuildingYear: {property['buildingYear']}\nMandate: {property['mandate']}\nDescription: {property['description']}\nPrice: {property['price']}\nPriceMin: {property['price_min']}\nPriceMax: {property['price_max']}\nPropertySurface: {property['propertySurface']}\nMinPropertySurface: {property['minPropertySurface']}\nMaxPropertySurface: {property['maxPropertySurface']}\nFloorNumber: {property['floorNumber']}\nRoomsCount: {property['roomsCount']}\nMinRoomsCount: {property['minRoomsCount']}\nMaxRoomsCount: {property['maxRoomsCount']}\nEnergy: {property['energy']}\nGeo: {property['geo']}")
-        print("-" * 40)
-
         # collect values as text-only dictionary for just the printed keys
-        properties_output.append({k: str(property.get(k, "")) for k in printed_keys})
+        property_info = {}
+        for key in general_keys:
+            if key in ["address", "characteristic"]:
+                # for nested dicts, extract only the specified keys
+                if key == "address":
+                    nested_dict = property.get(key, {})
+                    for nested_key in address_keys:
+                        property_info[f"{nested_key}"] = str(nested_dict.get(nested_key, ""))
+                elif key == "characteristic":
+                    nested_dict = property.get(key, {})
+                    for nested_key in characteristic_keys:
+                        property_info[f"{nested_key}"] = str(nested_dict.get(nested_key, ""))
+            else:
+                property_info[key] = str(property.get(key, ""))
+        properties_output.append(property_info)
 
     if is_save_json:
         # after loop, write to JSON file
@@ -96,7 +116,7 @@ def property_scraper(url, is_save_json=False):
         with open(output_path, "w", encoding="utf-8") as out_f:
             json.dump(properties_output, out_f, ensure_ascii=False, indent=2)
         print(f"wrote {len(properties_output)} entries to {output_path}")
-
+        
     return properties_output
 
 if __name__ == "__main__":
